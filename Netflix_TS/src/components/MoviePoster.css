@@ -1,0 +1,13 @@
+.movie_poster {
+  width: 150px;
+  height: auto;
+}
+
+.movie_poster_large {
+  max-height: 250px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.movie_poster_large:hover {
+  transform: scale(1.09);
+}
