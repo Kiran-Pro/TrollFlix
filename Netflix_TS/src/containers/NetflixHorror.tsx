@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import netflixHorrorSlice, {
   fetchHorrorAsync,
 } from "../store/netflixHorrorSlice";
-import Row from "../Row";
+import Row from "../components/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 

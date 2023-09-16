@@ -1,6 +1,6 @@
 import "./App.css";
-import Banner from "./Banner";
-import Nav from "./Nav";
+import Banner from "./components/Banner";
+import Nav from "./components/Nav";
 import { useEffect, useState } from "react";
 import MovieDetails from "./components/MovieDetails";
 import NetflixOriginals from "./containers/NetflixOriginals";

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Row from "../Row";
+import Row from "../components/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 import { fetchActionAsync } from "../store/netflixActionSlice";
