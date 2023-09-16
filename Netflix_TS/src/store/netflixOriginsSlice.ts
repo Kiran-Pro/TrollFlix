@@ -40,7 +40,7 @@ export const netflixOriginsSlice = createSlice({
     builder.addCase(fetchNetlixOriginsAsync.rejected, (state) => {
       console.log("fetchNetlixOriginsAsync.rejected");
       state.loading = false;
-      state.error = "Could not retrive data from server";
+      state.error = "Sorry couldn't retrieve the data from API ";
     });
     builder.addCase(fetchNetlixOriginsAsync.fulfilled, (state, action) => {
       console.log("fetchNetlixOriginsAsync.fulfilled");
