@@ -1,3 +1,5 @@
+import { MediaType } from "./mediaType";
+
 export interface Movie {
   backdrop_path: string;
   first_air_date: string;
@@ -13,4 +15,5 @@ export interface Movie {
   poster_path: string;
   vote_average: number;
   vote_count: number;
+  mediaType: MediaType;
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import "./MoviePoster.css";
 import { Movie } from "../types/movie";
 

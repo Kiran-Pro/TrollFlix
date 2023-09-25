@@ -45,7 +45,10 @@ export const netflixOriginsSlice = createSlice({
     builder.addCase(fetchNetlixOriginsAsync.fulfilled, (state, action) => {
       console.log("fetchNetlixOriginsAsync.fulfilled");
       state.loading = false;
-      state.movies = action.payload.results;
+      state.movies = (action.payload.results as any[]).map<Movie>((item) => ({
+        ...item,
+        mediaType: "tv-series",
+      }));
     });
   },
 });

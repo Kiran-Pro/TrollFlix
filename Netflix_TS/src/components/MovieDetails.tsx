@@ -1,14 +1,23 @@
-import React from "react";
 import MoviePoster from "./MoviePoster";
 import "./MovieDetails.css";
 import { Movie } from "../types/movie";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   movie: Movie;
   onClose: VoidFunction;
 }
 
+function getNavigationUrlByMovie(movie: Movie) {
+  if (movie.mediaType === "tv-series") {
+    return `/tv-series/cast/${movie.id}`;
+  } else {
+    return `/movie/cast/${movie.id}`;
+  }
+}
+
 function MovieDetails({ movie, onClose }: Props) {
+  const navigate = useNavigate();
   return (
     <div className="movie_box">
       <MoviePoster movie={movie} size="default" />
@@ -24,6 +33,16 @@ function MovieDetails({ movie, onClose }: Props) {
         <span>
           <span className="imdb">IMDB</span> : {movie.vote_average}
         </span>
+        {"                                                      "}
+        <button
+          onClick={() => {
+            const url = getNavigationUrlByMovie(movie);
+            navigate(url);
+          }}
+          className="banner_button"
+        >
+          Cast
+        </button>
       </div>
     </div>
   );

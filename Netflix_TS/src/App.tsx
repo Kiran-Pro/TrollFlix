@@ -30,6 +30,7 @@ function App() {
     <div className="app">
       <Nav />
       <Banner />
+
       <NetflixOriginals onSelect={(movie) => setSelectedMovie(movie)} />
       <NetflixTrending onSelect={(movie) => setSelectedMovie(movie)} />
       <NetflixToprated onSelect={(movie) => setSelectedMovie(movie)} />
@@ -37,41 +38,6 @@ function App() {
       <NetflixComedy onSelect={(movie) => setSelectedMovie(movie)} />
       <NetflixHorror onSelect={(movie) => setSelectedMovie(movie)} />
       <NetflixRomance onSelect={(movie) => setSelectedMovie(movie)} />
-      {/*<Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Trending Now"
-        fetchUrl={requests.fetchTrending}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Top Rated"
-        fetchUrl={requests.fetchTopRated}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Action Movies"
-        fetchUrl={requests.fetchActionMovies}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Comedy Movies"
-        fetchUrl={requests.fetchComedyMovies}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Horror Movies"
-        fetchUrl={requests.fetchHorrorMovies}
-        onSelect={(movie) => setSelectedMovie(movie)}
-      />
-      <Row
-        title="Romantic Movies"
-        fetchUrl={requests.fetchRomanticMovies}
-        onSelect={(movie) => setSelectedMovie(movie)}
-  />*/}
 
       {selectedMovie && (
         <MovieDetails
