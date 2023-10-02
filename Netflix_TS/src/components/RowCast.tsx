@@ -10,10 +10,12 @@ interface Props {
 function RowCast({ cast, onSelect }: Props) {
   return (
     <div className="row">
-      <h2>{cast.name}</h2>
+      <br />
+      <br />
 
-      <div onClick={() => onSelect(cast)}>
+      <div className="rowalign" onClick={() => onSelect(cast)}>
         <CastPoster cast={cast} />
+        <h4>{cast.name}</h4>
       </div>
     </div>
   );

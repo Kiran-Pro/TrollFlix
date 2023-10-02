@@ -21,7 +21,6 @@ function MovieCast({ mediaType }: Props) {
 
   useEffect(() => {
     if (movieId) {
-      debugger;
       dispatch(
         fetchCastAsync({
           mediaType,
@@ -35,7 +34,7 @@ function MovieCast({ mediaType }: Props) {
 
   return (
     <div className="box">
-      <h1>Cast and Crew</h1>
+      <h1>Cast</h1>
 
       {loading ? (
         <div>Loading...</div>

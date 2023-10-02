@@ -10,9 +10,9 @@ interface Props {
 
 function getNavigationUrlByMovie(movie: Movie) {
   if (movie.mediaType === "tv-series") {
-    return `/tv-series/cast/${movie.id}`;
+    return `/tv-details/${movie.id}`;
   } else {
-    return `/movie/cast/${movie.id}`;
+    return `/movie-details/${movie.id}`;
   }
 }
 

@@ -7,6 +7,7 @@ import netflixComedySlice from "./store/netflixComedySlice";
 import netflixHorrorSlice from "./store/netflixHorrorSlice";
 import netflixRomanceSlice from "./store/netflixRomanceSlice";
 import CastSlice from "./store/CastSlice";
+import MovieSlice from "./store/MovieSlice";
 
 const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
     netflixHorrorSlice: netflixHorrorSlice,
     netflixRomanceSlice: netflixRomanceSlice,
     castSlice: CastSlice,
+    movieSlice: MovieSlice,
   },
 });
 

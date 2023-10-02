@@ -10,7 +10,7 @@ interface Prop {
 function MoviePoster({ cast }: Prop) {
   return (
     <img
-      className="movie_poster"
+      className="cast_poster"
       src={`${baseUrl}${cast.profile_path}`}
       alt={cast.name}
     />

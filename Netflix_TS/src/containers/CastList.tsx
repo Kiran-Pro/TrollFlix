@@ -1,8 +1,5 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/useStore";
-
+import "../components/Row.css";
 import { Cast } from "../types/cast";
-import { fetchCastAsync } from "../store/CastSlice";
 import RowCast from "../components/RowCast";
 
 interface Props {
@@ -12,7 +9,7 @@ interface Props {
 
 function CastList({ castList, onSelect }: Props) {
   return (
-    <div>
+    <div className="castlist">
       {castList.map((cast) => {
         return <RowCast cast={cast} onSelect={(cast) => onSelect(cast)} />;
       })}

@@ -14,11 +14,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route
-            path="/tv-series/cast/:movieId"
+            path="/tv-details/:movieId"
             element={<MovieCast mediaType="tv-series" />}
           />
           <Route
-            path="/movie/cast/:movieId"
+            path="/movie-details/:movieId"
             element={<MovieCast mediaType="movie" />}
           />
         </Routes>

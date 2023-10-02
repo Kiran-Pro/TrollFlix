@@ -2,6 +2,10 @@
   width: 150px;
   height: auto;
 }
+.cast_poster{
+  width: 100px;
+  height: auto;
+}
 
 .movie_poster_large {
   max-height: 250px;
