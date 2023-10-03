@@ -19,7 +19,7 @@ function NetflixToprated({ onSelect }: Props) {
 
   return (
     <Row
-      title="NETFLIX TOP RATED"
+      title="TROLLFLIX TOP RATED"
       movies={movies}
       loading={loading}
       error={error}

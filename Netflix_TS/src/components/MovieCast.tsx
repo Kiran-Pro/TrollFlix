@@ -7,7 +7,6 @@ import { MediaType } from "../types/mediaType";
 import CastList from "../containers/CastList";
 import { fetchMovieAsync } from "../store/MovieSlice";
 import MovieList from "../containers/MovieList";
-import RowMovie from "./RowMovie";
 
 interface Props {
   mediaType: MediaType;

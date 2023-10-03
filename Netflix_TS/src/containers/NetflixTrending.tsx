@@ -21,7 +21,7 @@ function NetflixTrending({ onSelect }: Props) {
     <Row
       loading={loading}
       error={error}
-      title="NETFLIX TRENDING"
+      title="TROLLFLIX TRENDING"
       movies={movies}
       onSelect={(movie) => onSelect(movie)}
     />

@@ -22,7 +22,7 @@ function NetflixOriginals({ onSelect }: Props) {
     <Row
       loading={loading}
       error={error}
-      title="NETFLIX ORIGINALS"
+      title="TROLLFLIX ORIGINALS"
       movies={movies}
       onSelect={(movie) => onSelect(movie)}
     />

@@ -19,7 +19,7 @@ function NetflixComedy({ onSelect }: Props) {
 
   return (
     <Row
-      title="NETFLIX COMEDY"
+      title="TROLLFLIX COMEDY"
       movies={movies}
       loading={loading}
       error={error}
