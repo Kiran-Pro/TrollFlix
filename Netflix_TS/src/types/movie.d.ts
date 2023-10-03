@@ -16,4 +16,10 @@ export interface Movie {
   vote_average: number;
   vote_count: number;
   mediaType: MediaType;
+  budget: string;
+  release_date: string;
+  runtime: string;
+  status: string;
+  number_of_seasons: number;
+  tagline: string;
 }

@@ -5,7 +5,7 @@ import "./index.css";
 import { Provider } from "react-redux";
 import store from "./store.tsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import MovieCast from "./components/MovieCast.tsx";
+import MoreDetails from "./components/MovieCast.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -15,11 +15,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <Route path="/" element={<App />} />
           <Route
             path="/tv-details/:movieId"
-            element={<MovieCast mediaType="tv-series" />}
+            element={<MoreDetails mediaType="tv-series" />}
           />
           <Route
             path="/movie-details/:movieId"
-            element={<MovieCast mediaType="movie" />}
+            element={<MoreDetails mediaType="movie" />}
           />
         </Routes>
       </Router>

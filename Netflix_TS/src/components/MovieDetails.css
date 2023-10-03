@@ -14,6 +14,11 @@
 .movie_info {
   margin-left: 20px;
 }
+.movie_buttons{
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
 
 .banner_button {
   cursor: pointer;

@@ -7,13 +7,13 @@ import { Movie } from "../types/movie";
 interface State {
   loading: boolean;
   error?: string;
-  MovieList: Movie[];
+  movies: Movie | [];
   movieId?: string | null;
 }
 
 const initialState: State = {
   loading: false,
-  MovieList: [],
+  movies: [],
   movieId: null,
 };
 
@@ -28,7 +28,6 @@ function getApiUrlByMediaType(mediaType: MediaType, movieId: string) {
 export const fetchMovieAsync = createAsyncThunk(
   "fetchMovieAsync",
   async ({ mediaType, movieId }: { mediaType: MediaType; movieId: string }) => {
-    debugger;
     const response = await axios.get(getApiUrlByMediaType(mediaType, movieId), {
       params: {
         api_key: API_KEY,
@@ -52,7 +51,7 @@ export const MovieSlice = createSlice({
     });
     builder.addCase(fetchMovieAsync.fulfilled, (state, action) => {
       state.loading = false;
-      state.MovieList = action.payload.results;
+      state.movies = action.payload;
     });
   },
 });

@@ -6,11 +6,16 @@
   margin-right: 10px;
   
 }
+span{
+  font-weight: bold;
+}
 .rowalign{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  
 }
 .row_poster:hover {
   transform: scale(1.08);
@@ -24,12 +29,24 @@
   display: none;
 }
 
+
 .row {
   margin-left: 20px;
   color: white;
 }
+.row_movie{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+.title{
+  font-size: 3rem;
+  color: rgba(255, 0, 0, 0.649);
+}
 .castlist{
   display: flex;
+  overflow-y: hidden;
 }
 
 

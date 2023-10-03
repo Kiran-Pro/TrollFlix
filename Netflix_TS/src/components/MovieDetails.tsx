@@ -26,23 +26,23 @@ function MovieDetails({ movie, onClose }: Props) {
         <br />
         <p>{movie.overview}</p>
         <br />
-        <button className="banner_button" onClick={onClose}>
-          Close
-        </button>
-        {"                        "}
-        <span>
-          <span className="imdb">IMDB</span> : {movie.vote_average}
-        </span>
-        {"                                                      "}
-        <button
-          onClick={() => {
-            const url = getNavigationUrlByMovie(movie);
-            navigate(url);
-          }}
-          className="banner_button"
-        >
-          Cast
-        </button>
+        <div className="movie_buttons">
+          <button className="banner_button" onClick={onClose}>
+            Close
+          </button>
+          {/* <span>
+            <span className="imdb">IMDB</span> : {movie.vote_average}
+          </span> */}
+          <button
+            onClick={() => {
+              const url = getNavigationUrlByMovie(movie);
+              navigate(url);
+            }}
+            className="banner_button"
+          >
+            More Details
+          </button>
+        </div>
       </div>
     </div>
   );

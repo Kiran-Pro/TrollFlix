@@ -1,18 +1,22 @@
-import { useEffect, useState } from "react";
-import CastList from "../containers/CastList";
+import { useEffect } from "react";
 import "./MovieCast.css";
-import { Cast } from "../types/cast";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { fetchCastAsync } from "../store/CastSlice";
 import { MediaType } from "../types/mediaType";
+import CastList from "../containers/CastList";
+import { fetchMovieAsync } from "../store/MovieSlice";
+import MovieList from "../containers/MovieList";
+import RowMovie from "./RowMovie";
 
 interface Props {
   mediaType: MediaType;
 }
 
-function MovieCast({ mediaType }: Props) {
+function MoreDetails({ mediaType }: Props) {
   const dispatch = useAppDispatch();
+
+  const { movies } = useAppSelector((state) => state.movieSlice);
   const { error, loading, castList } = useAppSelector(
     (state) => state.castSlice
   );
@@ -20,6 +24,14 @@ function MovieCast({ mediaType }: Props) {
   const { movieId } = useParams();
 
   useEffect(() => {
+    if (movieId) {
+      dispatch(
+        fetchMovieAsync({
+          mediaType,
+          movieId,
+        })
+      );
+    }
     if (movieId) {
       dispatch(
         fetchCastAsync({
@@ -30,24 +42,33 @@ function MovieCast({ mediaType }: Props) {
     }
   }, []);
 
-  const [selectedCast, setSelectedCast] = useState<Cast | null>(null);
+  //const [selectedCast, setSelectedCast] = useState<Cast | null>(null);
 
   return (
     <div className="box">
-      <h1>Cast</h1>
-
       {loading ? (
-        <div>Loading...</div>
+        <div>Movie Details Loading...</div>
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <CastList
-          castList={castList}
-          onSelect={(cast) => setSelectedCast(cast)}
-        />
+        <MovieList movie={movies} />
+      )}
+
+      {loading ? (
+        <div>Cast Details Loading...</div>
+      ) : error ? (
+        <div>{error}</div>
+      ) : (
+        <div>
+          <h1>Cast</h1>
+          <CastList
+            castList={castList}
+            // onSelect={(cast) => setSelectedCast(cast)}
+          />
+        </div>
       )}
     </div>
   );
 }
 
-export default MovieCast;
+export default MoreDetails;
