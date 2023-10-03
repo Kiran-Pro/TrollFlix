@@ -59,7 +59,7 @@ function MoreDetails({ mediaType }: Props) {
         <div>{error}</div>
       ) : (
         <div>
-          <h1>Cast</h1>
+          <h1 className="cast_headline">Cast</h1>
           <CastList
             castList={castList}
             // onSelect={(cast) => setSelectedCast(cast)}

@@ -5,16 +5,25 @@ import MovieDetailsPoster from "./MovieDetailsPoster";
 interface Props {
   movie: Movie;
 }
+const baseUrl = "https://image.tmdb.org/t/p/original/";
 
 function RowMovie({ movie }: Props) {
   return (
-    <div className="row_movie">
+    <div
+      className="row_movie"
+      style={{
+        backgroundSize: "100% auto",
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+        backgroundPosition: "center center",
+        backdropFilter: "blur(8px)",
+      }}
+    >
       <br />
       <br />
       <div>
         <MovieDetailsPoster movie={movie} />
       </div>
-      <div>
+      <div className="bg_movie">
         <h1 className="title">
           {movie.name || movie.original_name || movie.title}
         </h1>

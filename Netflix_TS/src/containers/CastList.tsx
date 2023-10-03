@@ -9,10 +9,12 @@ function CastList({ castList }: Props) {
   return (
     <>
       <div className="castlist">
-        {castList.map((cast, key) => {
-          return <RowCast key={key} cast={cast} />;
-          //return <RowCast cast={cast} onSelect={(cast) => onSelect(cast)} />
-        })}
+        {castList
+          ? castList.map((cast, key) => {
+              return <RowCast key={key} cast={cast} />;
+              //return <RowCast cast={cast} onSelect={(cast) => onSelect(cast)} />
+            })
+          : "No cast is found"}
       </div>
     </>
   );

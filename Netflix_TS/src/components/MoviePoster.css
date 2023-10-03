@@ -16,6 +16,7 @@
   transform: scale(1.09);
 }
 .movie_details_poster{
+  padding: 30px;
   width: 300px;
   height: auto;
 }
