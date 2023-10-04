@@ -22,4 +22,5 @@ export interface Movie {
   status: string;
   number_of_seasons: number;
   tagline: string;
+  genres: string[];
 }

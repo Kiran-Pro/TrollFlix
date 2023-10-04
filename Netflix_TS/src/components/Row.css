@@ -6,6 +6,12 @@
   margin-right: 10px;
   
 }
+.imdb{
+  font-weight: bolder;
+  background-color: rgb(238, 218, 2);
+  padding: 2px;
+  color: black;
+}
 
 span{
   font-weight: bold;
