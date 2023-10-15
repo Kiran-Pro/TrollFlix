@@ -1,5 +1,5 @@
-import "../components/Row.css";
-import RowMovie from "../components/RowMovie";
+import "../Row/Row.css";
+import RowMovie from "../Row/RowMovie";
 import { Movie } from "../types/movie";
 
 interface Props {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { fetchNetlixOriginsAsync } from "../store/netflixOriginsSlice";
-import Row from "../components/Row";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 
@@ -16,7 +16,7 @@ function NetflixOriginals({ onSelect }: Props) {
 
   useEffect(() => {
     dispatch(fetchNetlixOriginsAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

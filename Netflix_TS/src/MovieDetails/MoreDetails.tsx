@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import "./MovieCast.css";
+import "../components/MovieCast.css";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { fetchCastAsync } from "../store/CastSlice";
 import { MediaType } from "../types/mediaType";
 import CastList from "../containers/CastList";
 import { fetchMovieAsync } from "../store/MovieSlice";
-import MovieList from "../containers/MovieList";
+import MovieList from "../containers/MoviePedia";
+import HomeLink from "../components/HomeLink";
 
 interface Props {
   mediaType: MediaType;
@@ -15,7 +16,7 @@ interface Props {
 function MoreDetails({ mediaType }: Props) {
   const dispatch = useAppDispatch();
 
-  const { movies } = useAppSelector((state) => state.movieSlice);
+  const { movie } = useAppSelector((state) => state.movieSlice);
   const { error, loading, castList } = useAppSelector(
     (state) => state.castSlice
   );
@@ -30,8 +31,7 @@ function MoreDetails({ mediaType }: Props) {
           movieId,
         })
       );
-    }
-    if (movieId) {
+
       dispatch(
         fetchCastAsync({
           mediaType,
@@ -39,18 +39,19 @@ function MoreDetails({ mediaType }: Props) {
         })
       );
     }
-  }, []);
+  }, [dispatch, mediaType, movieId]);
 
   //const [selectedCast, setSelectedCast] = useState<Cast | null>(null);
 
   return (
     <div className="box">
+      <HomeLink />
       {loading ? (
         <div>Movie Details Loading...</div>
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <MovieList movie={movies} />
+        movie && <MovieList movie={movie} />
       )}
 
       {loading ? (

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Row from "../components/Row";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 import { fetchActionAsync } from "../store/netflixActionSlice";
@@ -13,9 +13,10 @@ function NetflixAction({ onSelect }: Props) {
   const { error, loading, movies } = useAppSelector(
     (state) => state.netflixActionSlice
   );
+
   useEffect(() => {
     dispatch(fetchActionAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

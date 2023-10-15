@@ -1,5 +1,5 @@
 import "./Row.css";
-import MoviePoster from "./MoviePoster";
+import MoviePoster from "../MovieDetails/MoviePoster";
 import { Movie } from "../types/movie";
 
 interface Props {

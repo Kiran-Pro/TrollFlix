@@ -1,6 +1,6 @@
 import "./Row.css";
 import { Cast } from "../types/cast";
-import CastPoster from "./CastPoster";
+import CastPoster from "../components/CastPoster";
 
 interface Props {
   cast: Cast;

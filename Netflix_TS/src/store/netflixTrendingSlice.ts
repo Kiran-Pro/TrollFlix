@@ -39,12 +39,11 @@ export const netflixTrendingSlice = createSlice({
     });
     builder.addCase(fetchNetflixTrendingAsync.fulfilled, (state, action) => {
       state.loading = false;
-      state.movies = (action.payload.results as any[]).map<Movie>(
-        (item: any) => ({
-          ...item,
-          mediaType: "movie",
-        })
-      );
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      state.movies = (action.payload.results as any[]).map<Movie>((item) => ({
+        ...item,
+        mediaType: "movie",
+      }));
     });
   },
 });

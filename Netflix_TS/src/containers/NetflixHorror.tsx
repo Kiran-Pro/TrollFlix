@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
-import netflixHorrorSlice, {
-  fetchHorrorAsync,
-} from "../store/netflixHorrorSlice";
-import Row from "../components/Row";
+import { useEffect } from "react";
+import { fetchHorrorAsync } from "../store/netflixHorrorSlice";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 
@@ -18,7 +16,7 @@ function NetflixHorror({ onSelect }: Props) {
 
   useEffect(() => {
     dispatch(fetchHorrorAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

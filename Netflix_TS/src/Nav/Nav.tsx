@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import netflix from "../assets/Logonetflix.png";
 import avatar from "../assets/avatar.png";
 import "./Nav.css";
+import HomeLink from "../components/HomeLink";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -18,7 +18,8 @@ function Nav() {
   }, []);
   return (
     <div className={`nav ${show && "nav_black"}`}>
-      <img className="logo" src={netflix} alt="Netflix logo" />
+      {/* <img className="logo" src={netflix} alt="Netflix logo" /> */}
+      <HomeLink />
       <img className="logo2" src={avatar} alt="avatar logo" />
     </div>
   );

@@ -7,14 +7,12 @@ import { Movie } from "../types/movie";
 interface State {
   loading: boolean;
   error?: string;
-  movies: Movie | [];
-  movieId?: string | null;
+  movie?: Movie;
+  movieId?: string;
 }
 
 const initialState: State = {
   loading: false,
-  movies: [],
-  movieId: null,
 };
 
 function getApiUrlByMediaType(mediaType: MediaType, movieId: string) {
@@ -51,7 +49,7 @@ export const MovieSlice = createSlice({
     });
     builder.addCase(fetchMovieAsync.fulfilled, (state, action) => {
       state.loading = false;
-      state.movies = action.payload;
+      state.movie = action.payload;
     });
   },
 });

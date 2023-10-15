@@ -1,4 +1,4 @@
-import "./MoviePoster.css";
+import "../components/MoviePoster.css";
 import { Movie } from "../types/movie";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { fetchNetflixTrendingAsync } from "../store/netflixTrendingSlice";
-import Row from "../components/Row";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 
@@ -15,7 +15,7 @@ function NetflixTrending({ onSelect }: Props) {
   );
   useEffect(() => {
     dispatch(fetchNetflixTrendingAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

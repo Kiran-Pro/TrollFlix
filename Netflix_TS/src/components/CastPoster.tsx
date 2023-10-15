@@ -1,5 +1,6 @@
 import "./MoviePoster.css";
 import { Cast } from "../types/cast";
+import dummyAvatar from "../assets/dummy-avatar.png";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
@@ -8,13 +9,10 @@ interface Prop {
 }
 
 function MoviePoster({ cast }: Prop) {
-  return (
-    <img
-      className="cast_poster"
-      src={`${baseUrl}${cast.profile_path}`}
-      alt={cast.name}
-    />
-  );
+  const imgSrc = cast.profile_path
+    ? `${baseUrl}${cast.profile_path}`
+    : dummyAvatar;
+  return <img className="cast_poster" src={imgSrc} alt={cast.name} />;
 }
 
 export default MoviePoster;

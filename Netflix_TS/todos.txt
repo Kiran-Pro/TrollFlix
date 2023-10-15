@@ -1,0 +1,15 @@
+Chages / bug fixes
+1. change the location of the page components - Done
+2. error handling for not founded images - Done
+3. change component names to nice ones - Done
+4. change UI for 404 page - Done
+5. add dummy avatar for cast - Done
+6. add header for nested pages - Done
+7. try to change route config to use createBrowserRouter - Done
+
+Added feature
+1. create a separate actor details page 
+(actor image, bio, personal info, 10 most rated movies (image, title),
+ list of movies and tv series 
+ (apply filter to show all|only movies|only tv series in the front side))
+

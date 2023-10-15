@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Row from "../components/Row";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 import { fetchTopratedAsync } from "../store/netflixTopratedSlice";
@@ -13,9 +13,10 @@ function NetflixToprated({ onSelect }: Props) {
   const { error, loading, movies } = useAppSelector(
     (state) => state.netflixTopratedSlice
   );
+
   useEffect(() => {
     dispatch(fetchTopratedAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

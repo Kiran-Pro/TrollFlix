@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { fetchRomanceAsync } from "../store/netflixRomanceSlice";
-import Row from "../components/Row";
+import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";
 import { Movie } from "../types/movie";
 
@@ -16,7 +16,7 @@ function NetflixRomance({ onSelect }: Props) {
 
   useEffect(() => {
     dispatch(fetchRomanceAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Row

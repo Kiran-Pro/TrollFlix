@@ -1,6 +1,6 @@
-import "../components/Row.css";
+import "../Row/Row.css";
 import { Cast } from "../types/cast";
-import RowCast from "../components/RowCast";
+import RowCast from "../Row/RowCast";
 interface Props {
   castList: Cast[];
   //onSelect: (cast: Cast) => void;

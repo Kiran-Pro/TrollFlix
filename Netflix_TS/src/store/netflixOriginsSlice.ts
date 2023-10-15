@@ -45,6 +45,7 @@ export const netflixOriginsSlice = createSlice({
     builder.addCase(fetchNetlixOriginsAsync.fulfilled, (state, action) => {
       console.log("fetchNetlixOriginsAsync.fulfilled");
       state.loading = false;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       state.movies = (action.payload.results as any[]).map<Movie>((item) => ({
         ...item,
         mediaType: "tv-series",

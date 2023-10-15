@@ -2,6 +2,8 @@
   color: white;
   object-fit: contain;
   height: 448px;
+  background-size: cover;
+  background-position: center center;
 }
 .banner_contents {
   margin-left: 30px;
@@ -48,4 +50,9 @@
     rgba(37, 37, 37, 0.61),
     #111
   );
+}
+.error-message {
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 1rem;
 }

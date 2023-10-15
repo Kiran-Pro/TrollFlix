@@ -1,8 +1,8 @@
 import "./App.css";
-import Banner from "./components/Banner";
-import Nav from "./components/Nav";
-import { useEffect, useState } from "react";
-import MovieDetails from "./components/MovieDetails";
+import Banner from "./Banner/Banner";
+import Nav from "./Nav/Nav";
+import { useCallback, useEffect, useState } from "react";
+import MovieDetails from "./MovieDetails/MovieDetails";
 import NetflixOriginals from "./containers/NetflixOriginals";
 import { Movie } from "./types/movie";
 import NetflixTrending from "./containers/NetflixTrending";
@@ -15,16 +15,16 @@ import NetflixRomance from "./containers/NetflixRomance";
 function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
-  const closeMovieBox = () => {
+  const closeMovieBox = useCallback(() => {
     setSelectedMovie(null);
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", closeMovieBox);
     return () => {
       window.removeEventListener("scroll", closeMovieBox);
     };
-  }, []);
+  }, [closeMovieBox]);
 
   return (
     <div className="app">
@@ -40,10 +40,7 @@ function App() {
       <NetflixRomance onSelect={(movie) => setSelectedMovie(movie)} />
 
       {selectedMovie && (
-        <MovieDetails
-          movie={selectedMovie}
-          onClose={() => setSelectedMovie(null)}
-        />
+        <MovieDetails movie={selectedMovie} onClose={closeMovieBox} />
       )}
     </div>
   );

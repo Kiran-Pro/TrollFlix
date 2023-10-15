@@ -1,6 +1,6 @@
 import "./Row.css";
 import { Movie } from "../types/movie";
-import MovieDetailsPoster from "./MovieDetailsPoster";
+import MovieDetailsPoster from "../MovieDetails/MovieDetailsPoster";
 
 interface Props {
   movie: Movie;
