@@ -1,13 +1,12 @@
 import { useEffect } from "react";
-import "../components/MovieCast.css";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../store/useStore";
-import { fetchCastAsync } from "../store/CastSlice";
-import { MediaType } from "../types/mediaType";
+import "../components/MovieCast.css";
 import CastList from "../containers/CastList";
-import { fetchMovieAsync } from "../store/MovieSlice";
 import MovieList from "../containers/MoviePedia";
-import HomeLink from "../components/HomeLink";
+import { fetchCastAsync } from "../store/CastSlice";
+import { fetchMovieAsync } from "../store/MovieSlice";
+import { useAppDispatch, useAppSelector } from "../store/useStore";
+import { MediaType } from "../types/mediaType";
 
 interface Props {
   mediaType: MediaType;
@@ -43,31 +42,35 @@ function MoreDetails({ mediaType }: Props) {
 
   //const [selectedCast, setSelectedCast] = useState<Cast | null>(null);
 
-  return (
-    <div className="box">
-      <HomeLink />
-      {loading ? (
-        <div>Movie Details Loading...</div>
-      ) : error ? (
-        <div>{error}</div>
-      ) : (
-        movie && <MovieList movie={movie} />
-      )}
+  if (movieId === undefined) {
+    return null;
+  }
 
-      {loading ? (
+  if (loading) {
+    return (
+      <>
+        <div>Movie Details Loading...</div>
         <div>Cast Details Loading...</div>
-      ) : error ? (
-        <div>{error}</div>
-      ) : (
-        <div>
-          <h1 className="cast_headline">Cast</h1>
-          <CastList
-            castList={castList}
-            // onSelect={(cast) => setSelectedCast(cast)}
-          />
-        </div>
-      )}
-    </div>
+      </>
+    );
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <>
+      {movie && <MovieList movie={movie} />}
+
+      <h1 className="cast_headline">Cast</h1>
+      <CastList
+        castList={castList}
+        mediaId={movieId}
+        mediaType={mediaType}
+        // onSelect={(cast) => setSelectedCast(cast)}
+      />
+    </>
   );
 }
 

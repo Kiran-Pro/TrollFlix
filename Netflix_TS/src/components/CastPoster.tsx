@@ -6,13 +6,14 @@ const baseUrl = "https://image.tmdb.org/t/p/original/";
 
 interface Prop {
   cast: Cast;
+  // onSelect: (cast: Cast) => void;
 }
 
-function MoviePoster({ cast }: Prop) {
+function CastPoster({ cast }: Prop) {
   const imgSrc = cast.profile_path
     ? `${baseUrl}${cast.profile_path}`
     : dummyAvatar;
   return <img className="cast_poster" src={imgSrc} alt={cast.name} />;
 }
 
-export default MoviePoster;
+export default CastPoster;

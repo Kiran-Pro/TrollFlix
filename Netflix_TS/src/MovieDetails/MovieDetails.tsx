@@ -9,10 +9,10 @@ interface Props {
 }
 
 function getNavigationUrlByMovie(movie: Movie) {
-  if (movie.mediaType === "tv-series") {
-    return `/tv-details/${movie.id}`;
+  if (movie.mediaType === "tv") {
+    return `/tv/${movie.id}`;
   } else {
-    return `/movie-details/${movie.id}`;
+    return `/movie/${movie.id}`;
   }
 }
 
@@ -30,9 +30,6 @@ function MovieDetails({ movie, onClose }: Props) {
           <button className="banner_button" onClick={onClose}>
             Close
           </button>
-          {/* <span>
-            <span className="imdb">IMDB</span> : {movie.vote_average}
-          </span> */}
           <button
             onClick={() => {
               const url = getNavigationUrlByMovie(movie);

@@ -17,7 +17,7 @@ const initialState: State = {
 export const fetchHorrorAsync = createAsyncThunk(
   "fetchHorrorAsync",
   async () => {
-    const response = await axios.get(requests.fetchComedyMovies, {
+    const response = await axios.get(requests.fetchHorrorMovies, {
       params: {
         api_key: API_KEY,
         with_genres: 27,

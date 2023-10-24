@@ -48,7 +48,7 @@ export const netflixOriginsSlice = createSlice({
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       state.movies = (action.payload.results as any[]).map<Movie>((item) => ({
         ...item,
-        mediaType: "tv-series",
+        mediaType: "tv",
       }));
     });
   },

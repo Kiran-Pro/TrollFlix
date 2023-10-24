@@ -1,21 +1,26 @@
 import "./Row.css";
 import { Cast } from "../types/cast";
 import CastPoster from "../components/CastPoster";
+import { Link } from "react-router-dom";
+import { MediaType } from "../types/mediaType";
 
 interface Props {
   cast: Cast;
-  //onSelect: (cast: Cast) => void;
+  mediaType: MediaType;
+  mediaId: string;
 }
 
-function RowCast({ cast }: Props) {
+function RowCast({ cast, mediaType, mediaId }: Props) {
   return (
     <div className="row">
       <br />
       <br />
 
       <div className="rowalign">
-        <CastPoster cast={cast} />
-        <h4>{cast.name}</h4>
+        <Link className="link" to={`/${mediaType}/${mediaId}/cast/${cast.id}`}>
+          <CastPoster cast={cast} />
+          <h4>{cast.name}</h4>
+        </Link>
       </div>
     </div>
   );
