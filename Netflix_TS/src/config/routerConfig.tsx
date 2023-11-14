@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PageNotFound from "../ErrorPage/PageNotFound";
 import MoreDetails from "../MovieDetails/MoreDetails";
-import CastDetailContainerWrapper from "../components/CastDetailWrapper";
-import Layout from "../components/Layout";
+import CastDetailContainerWrapper from "../CastDetails/CastDetailWrapper";
+import Layout from "../Layout/Layout";
 
 const router = createBrowserRouter([
   {

@@ -30,20 +30,23 @@ function CastDetails({ castDetails }: Props) {
         </div>
         <br />
         <div>
+          Known for: <b>{castDetails.known_for_department}</b>{" "}
+        </div>
+        <br />
+        <div>
           <b>Biography :</b>
           <br />
           <br /> <div>{castDetails.biography}</div>
         </div>
         <br />
-        <div>
-          <span className="imdb">IMDB ID</span> : {castDetails.imdb_id}
-        </div>
-        <br />
+
         <div>
           <b>Popularity:</b> {castDetails.popularity}%
         </div>
         <br />
-
+        <div>
+          <span className="imdb">IMDB ID</span> : {castDetails.imdb_id}
+        </div>
         <br />
       </div>
     </div>

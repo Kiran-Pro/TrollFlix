@@ -1,4 +1,4 @@
-import HomeLink from "../components/HomeLink";
+import HomeLink from "../HomeLink/HomeLink";
 import "./PageNotFound.css";
 
 function PageNotFound() {

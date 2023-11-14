@@ -9,6 +9,7 @@ import netflixRomanceSlice from "./store/netflixRomanceSlice";
 import CastSlice from "./store/CastSlice";
 import MovieSlice from "./store/MovieSlice";
 import CastDetailSlice from "./store/CastDetailSlice";
+import CastCreditsSlice from "./store/CastCreditsSlice";
 
 const store = configureStore({
   reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
     castSlice: CastSlice,
     movieSlice: MovieSlice,
     castDetails: CastDetailSlice,
+    CastCreditsSlice: CastCreditsSlice,
   },
 });
 

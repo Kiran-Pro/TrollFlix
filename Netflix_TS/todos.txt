@@ -8,11 +8,11 @@ Chages / bug fixes
 7. try to change route config to use createBrowserRouter - Done
 
 Added feature
-1. create a separate actor details page 
+1. create a separate actor details page - Done
 (actor image, bio, personal info, 10 most rated movies (image, title),
  list of movies and tv series 
- (apply filter to show all|only movies|only tv series in the front side))
-2. add breadcrumb ( Home / [Movie Title] / [Person name] )
+ (apply filter to show all|only movies|only tv series in the front side)) - Done
+2. add breadcrumb ( Home / [Movie Title] / [Person name] ) - Almost
 
 [
   {

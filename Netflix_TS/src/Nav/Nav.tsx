@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import avatar from "../assets/avatar.png";
 import "./Nav.css";
-import HomeLink from "../components/HomeLink";
+import HomeLink from "../HomeLink/HomeLink";
 
 function Nav() {
   const [show, handleShow] = useState(false);

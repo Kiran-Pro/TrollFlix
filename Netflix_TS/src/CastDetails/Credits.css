@@ -6,6 +6,10 @@
   margin-right: 10px;
   
 }
+.alignment{
+position: absolute;
+right: 49px;
+}
 
 .imdb{
   font-weight: bolder;
@@ -32,6 +36,7 @@ span{
   display: flex;
   overflow-y: hidden;
   padding: 20px;
+  
 }
 .row_posters::-webkit-scrollbar {
   display: none;
@@ -42,11 +47,12 @@ span{
   margin-left: 20px;
   color: white;
 }
-.row_movie{
+.row2_movie{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 90px;
+  width: 150px;
   padding: 10px;
 }
 .row_movie::before {
