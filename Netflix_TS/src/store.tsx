@@ -10,6 +10,9 @@ import CastSlice from "./store/CastSlice";
 import MovieSlice from "./store/MovieSlice";
 import CastDetailSlice from "./store/CastDetailSlice";
 import CastCreditsSlice from "./store/CastCreditsSlice";
+import SearchMovieSlice from "./store/SearchMovieSlice";
+import SearchTvSlice from "./store/SearchTvSlice";
+import SearchPersonSlice from "./store/SearchPersonSlice";
 
 const store = configureStore({
   reducer: {
@@ -24,6 +27,9 @@ const store = configureStore({
     movieSlice: MovieSlice,
     castDetails: CastDetailSlice,
     CastCreditsSlice: CastCreditsSlice,
+    SearchMovieSlice: SearchMovieSlice,
+    SearchTvSlice: SearchTvSlice,
+    SearchPersonSlice: SearchPersonSlice,
   },
 });
 

@@ -1,0 +1,12 @@
+.img-size{
+  height: 100px;
+  width: 70px;
+}
+.Results-Con{
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+ 
+}

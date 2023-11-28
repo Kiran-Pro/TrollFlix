@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useFilterCredits } from "../hooks/useFilterCredits";
 import { ICastCredits } from "../types/CastCredits";
 import CastCreditPoster from "./CastCreditPoster";
 import "./Credits.css";
@@ -8,20 +9,14 @@ type Props = {
 };
 
 function CastCredits({ castCredits }: Props) {
-  const [selectedType, setSelectedType] = useState<string>("all");
+  const [selectedType, setSelectedType] = useState("all");
 
-  const filterByMediaType = (type: string): ICastCredits[] => {
-    if (type === "all") {
-      return castCredits;
-    } else {
-      return castCredits.filter((credit) => credit.media_type === type);
-    }
-  };
-  const filteredCredits = filterByMediaType(selectedType);
+  const { filteredCredits } = useFilterCredits(castCredits, selectedType);
 
   return (
     <div>
       <h1>Credits</h1>
+
       <div className="alignment">
         <select
           value={selectedType}

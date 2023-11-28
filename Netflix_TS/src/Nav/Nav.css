@@ -26,3 +26,50 @@
   position: fixed;
   right: 20px;
 }
+.alignSearch{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.searchInput {
+  padding: 7px;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 200px;
+  position: absolute;
+  top: 50%; /* Adjust as needed */
+  left: 75%; /* Adjust as needed */
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: whitesmoke;
+}
+.searchButton{
+  position: absolute;
+  right: 100px;
+  background:none;
+  border: none;
+}
+.searchButtonIn{
+  width: 32px;
+  height: 32px;
+}
+.submitSearchButton{
+position: absolute;
+left: 84%;
+border-radius: 4px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+border: none;
+background-color: black;
+color: whitesmoke;
+font-weight: bold
+}
+
+.submitSearchButton:hover{
+  background-color: white;
+  color: black;
+}

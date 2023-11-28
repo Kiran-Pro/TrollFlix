@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import PageNotFound from "../ErrorPage/PageNotFound";
-import MoreDetails from "../MovieDetails/MoreDetails";
 import CastDetailContainerWrapper from "../CastDetails/CastDetailWrapper";
+import PageNotFound from "../ErrorPage/PageNotFound";
 import Layout from "../Layout/Layout";
+import MoreDetails from "../MovieDetails/MoreDetails";
+import SearchWrapper from "../containers/SearchWrapper";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         errorElement: <PageNotFound />,
       },
     ],
+  },
+  {
+    path: "/search",
+    element: <SearchWrapper />,
+    errorElement: <PageNotFound />,
   },
   {
     path: "/404",
