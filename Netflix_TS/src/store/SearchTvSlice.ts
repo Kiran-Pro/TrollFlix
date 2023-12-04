@@ -2,12 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Movie } from "../types/movie";
 import axios from "../axios";
 import { API_KEY } from "../constants/api";
+import { BaseSearchState } from "../types/search";
 
-interface State {
-  loading: boolean;
-  error?: string;
+interface State extends BaseSearchState {
   tv: Movie[];
-  pages: number;
 }
 
 const initialState: State = {
@@ -40,9 +38,8 @@ export const SearchTvSlice = createSlice({
     });
     builder.addCase(fetchSearchTvAsync.fulfilled, (state, action) => {
       state.loading = false;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       state.tv = action.payload.results;
-      state.pages = action.payload.page;
+      state.pages = action.payload.total_pages;
     });
   },
 });

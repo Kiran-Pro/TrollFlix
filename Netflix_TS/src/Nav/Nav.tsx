@@ -18,7 +18,7 @@ function Nav() {
   };
 
   const toggleSearchInput = () => {
-    setShowSearchInput(!showSearchInput);
+    setShowSearchInput((prevState) => !prevState);
   };
 
   return (
@@ -29,20 +29,20 @@ function Nav() {
           <img className="searchButtonIn" src={search} alt="search" />
         </button>
         {showSearchInput && (
-          <input
-            type="text"
-            placeholder="Search"
-            className="searchInput"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-          />
+          <>
+            <input
+              type="text"
+              placeholder="Search"
+              className="searchInput"
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+            />
+            <button className="submitSearchButton" onClick={handleSearch}>
+              Search
+            </button>
+          </>
         )}
         <img className="logo2" src={avatar} alt="avatar logo" />
-        {showSearchInput && (
-          <button className="submitSearchButton" onClick={handleSearch}>
-            Search
-          </button>
-        )}
       </div>
     </div>
   );
