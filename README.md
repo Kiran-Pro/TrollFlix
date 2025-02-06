@@ -26,9 +26,9 @@ TrollFlix is a visually appealing and interactive web application for discoverin
 
 ### Installation  
 
-1. **Clone the repository:**  
-2. **Navigate to the project folder:**
-3. **Install dependencies:**
-4. **Run the Application:**  
+1. **Clone the repository**  
+2. **Navigate to the project folder**
+3. **Install dependencies**
+4. **Run the Application**  
 
 Happy coding! 🚀
