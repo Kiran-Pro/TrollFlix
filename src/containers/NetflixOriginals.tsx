@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { fetchNetlixOriginsAsync } from "../store/netflixOriginsSlice";
 import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";

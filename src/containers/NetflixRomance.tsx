@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { fetchRomanceAsync } from "../store/netflixRomanceSlice";
 import Row from "../Row/Row";
 import { useAppDispatch, useAppSelector } from "../store/useStore";

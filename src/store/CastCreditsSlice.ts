@@ -6,7 +6,7 @@ import { ICastCredits } from "../types/CastCredits";
 interface State {
   loading: boolean;
   error?: string;
-  castCredits?: ICastCredits;
+  castCredits?: ICastCredits[];
   personId?: string | null;
 }
 
