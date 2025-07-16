@@ -1,0 +1,15 @@
+.not-found-container {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.not-found-container h1 {
+  font-size: 3rem;
+  color: #fff; 
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  color: rgba(255, 0, 0, 0.725);
+}
