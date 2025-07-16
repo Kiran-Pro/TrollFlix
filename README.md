@@ -1,4 +1,4 @@
-#🎬 TrollFlix
+# 🎬 TrollFlix
 
 TrollFlix is a visually stunning and interactive web application for discovering movies and TV shows. Designed with modern aesthetics and built using cutting-edge web technologies, it offers a smooth, responsive, and engaging user experience across all devices.
 
